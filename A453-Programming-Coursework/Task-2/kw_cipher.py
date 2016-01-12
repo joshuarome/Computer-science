@@ -3,7 +3,11 @@
 import sys
 import argparse
 
-from caesar_cipher import get_choice
+try:
+    from caesar_cipher import get_choice
+except ImportError:
+    print("Error: 'caesar_cipher.py' must be in the same directory in order to work")
+    sys.exit(1)
 
 def cipher(choice: str, text: str, keyw: str) -> str:
     """
@@ -84,7 +88,7 @@ def main() -> int :
         
         parser.add_argument("-c", "--choice", help="the choice to encode or decode (E, D)", choices = ("E", "e", "D", "d"))
         parser.add_argument("-t", "--text", help="the text to be ciphered/deciphered")
-        parser.add_argument("-kw", "--keyword", help="the keyword to be ciphered by")
+        parser.add_argument("-k", "--keyword", help="the keyword to be ciphered by")
         
         args = parser.parse_args()
         print(cipher(args.choice, args.text, args.keyword))
