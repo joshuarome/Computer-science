@@ -84,7 +84,7 @@ def main() -> int :
         
         parser.add_argument("-c", "--choice", help="the choice to encode or decode (E, D)", choices = ("E", "e", "D", "d"))
         parser.add_argument("-t", "--text", help="the text to be ciphered/deciphered")
-        parser.add_argument("-k", "--keyword", help="the keyword to be ciphered by")
+        parser.add_argument("-kw", "--keyword", help="the keyword to be ciphered by")
         
         args = parser.parse_args()
         print(cipher(args.choice, args.text, args.keyword))
