@@ -206,6 +206,8 @@ The terminal arguments are automatically checked and validated by the `argparse`
 Development stages:
 [INSERT DEVELOPMENT STAGES HERE]
 
+notes: used string for cipher_test - quadratic runtime, global variables, recursive function, while loop rather than modulus...
+
 Final product:
 ```python
 #!/usr/bin/python3
