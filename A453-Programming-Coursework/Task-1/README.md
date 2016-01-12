@@ -9,20 +9,20 @@ analysis.
 ## 1. Requirements
 The Caesar cipher system must
 
-- Allow the use of terminal arguments, for example:
+1. Allow the use of terminal arguments, for example:
   ```bash
 caesar_cipher.py --choice "E" --text "COMPUTING IS FUN" --shift 5 => "HTRUZYNSL NX KZS"
 ```
 > Note: `=>` indicates the resulting output
 
-- Short hand arguments must also be allowed, for example:
+2. Short hand arguments must also be allowed, for example:
   ```batch
 caesar_cipher.py -c "E" -t "COMPUTING IS FUN" -s 1 => "HTRUZYNSL NX KZS"
 ```
 
-- If no terminal arguments have been passed, then the system must take and store the user’s choice, plain/cipher text and shift
+3. If no terminal arguments have been passed, then the system must take and store the user’s choice, plain/cipher text and shift
 
-- The users input (whether it be from the terminal arguments or not) must be processed (ciphered according to their choice, text and shift). Example run:
+4. The users input (whether it be from the terminal arguments or not) must be processed (ciphered according to their choice, text and shift). Example run:
    ```bash
 Do you want to encode or decode? (E, D)
 > E
@@ -39,9 +39,9 @@ Do you want to start again? (Y, N)
 > N
 ```
 
-- The processed input must then be outputted giving the option to restart
+5. The processed input must then be outputted giving the option to restart
 
-- Handle possible errors such as:
+6. Handle possible errors such as:
  - Non alphabetical plain/cipher text
  - Non integer shift values
  - Shifts which go out of bounds
