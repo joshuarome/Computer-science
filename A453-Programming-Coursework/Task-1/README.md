@@ -90,7 +90,8 @@ void function caesar_cipher {
 }
 ```
 Flowchart:
-[INSERT FLOWCHART HERE]
+
+![Flowchart](Flowchart.jpg)
 
 ## 3. Development
 Development choices:
