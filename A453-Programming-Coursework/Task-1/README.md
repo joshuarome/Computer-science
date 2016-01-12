@@ -11,13 +11,13 @@ The Caesar cipher system must
 
 - Allow the use of terminal arguments, for example:
   ```bash
-caesar_cipher.py --choice "E" --text "Hello" --shift 1 => "Ifmmp"
+caesar_cipher.py --choice "E" --text "COMPUTING IS FUN" --shift 5 => "HTRUZYNSL NX KZS"
 ```
 > Note: `=>` indicates the resulting output
 
 - Short hand arguments must also be allowed, for example:
   ```batch
-caesar_cipher.py -c "E" -t "Hello" -s 1 => "Ifmmp"
+caesar_cipher.py -c "E" -t "COMPUTING IS FUN" -s 1 => "HTRUZYNSL NX KZS"
 ```
 
 - If no terminal arguments have been passed, then the system must take and store the user’s choice, plain/cipher text and shift
