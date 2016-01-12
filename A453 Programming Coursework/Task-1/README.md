@@ -112,9 +112,7 @@ Validated inputs:
 
 Input  | Purpose | Result
 ------------- | ------------- | -------------
-!"£$%^&*()_+  | Check how the system handles symbols | Output rejected displaying an error message asking to try again
-1.2, 4, -5.43 | Check how the system handles numeric values | Output rejected displaying an error message asking to try again
-abcdefABCDEF  | Check how the system handles upper and lowercase alhpabetical values which are not E or D | Output rejected displaying an error message asking to try again
+Other values than E or D  | Check how the system handles other values than E or D | Output rejected displaying an error message asking to try again
 E and D  | Check how the system handles E and D | Output accepted and the program continues to the next logical step
 
 Program test run:
@@ -142,9 +140,7 @@ Do you want to encode or decode? (E, D)
 
 Input  | Purpose | Result
 ------------- | ------------- | -------------
-!"£$%^&*()_+  | Check how the system handles symbols | Output rejected displaying an error message asking to try again
-abcdefABCDEF  | Check how the system handles upper and lowercase alhpabetical values | Output rejected displaying an error message asking to try again
-1.2, 3.4, 5.6 | Check how the system handles floating point values | Output rejected displaying an error message asking to try again
+Non integer values  | Check how the system handles non integer values | Output rejected displaying an error message asking to try again
 123456789  | Check how the system handles integer values | Output accepted and the program continues to the next logical step
 
 Program test run:
@@ -174,10 +170,8 @@ Your encoded/decoded text is: ...
 
 Input  | Purpose | Result
 ------------- | ------------- | -------------
-!"£$%^&*()_+  | Check how the system handles symbols | Output rejected displaying an error message asking to try again
-1.2, 4, -5.43 | Check how the system handles numeric values | Output rejected displaying an error message asking to try again
-abcdefABCDEF  | Check how the system handles upper and lowercase alhpabetical values which are not Y or N | Output rejected displaying an error message asking to try again
- Y and N  | Check how the system handles Y and N | Output accepted and the program continues to the next logical step
+Other values than Y or N  | Check how the system handles other values than Y or N | Output rejected displaying an error message asking to try again
+Y and N  | Check how the system handles Y and N | Output accepted and the program continues to the next logical step
 
 Program test run:
 ```bash
