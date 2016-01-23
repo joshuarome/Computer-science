@@ -50,55 +50,50 @@ Do you want to start again? (Y, N)
  
 ## 2. Design
 The Caesar cipher has been built assuming that it will be run from a terminal or Pythons IDLE.
-The variables and functions have all been documented in `caesar_cipher.py` itself, in case you do not know how python’s doc strings work:
+The variables and functions have all been documented in `caesar_cipher.py` itself. The doc strings address the requirments listed at the top of this document, in case you do not know how python’s doc strings work:
 
 Either look at the source code or import `caesar_cipher.py` as a module and print the `__doc__` property of each function (`cipher`, `get_choice` and `main`).
 
-The Caesar cipher has been designed with two different approaches: C style pseudocode (https://en.wikipedia.org/wiki/Pseudocode#Syntax) and a flow chart.
+The Caesar cipher has been designed with two different approaches: pseudocode and a flow chart.
 
 Pseudocode:
 ```c
-void function caesar_cipher {
-    print "do you want to encode (e) or decode (d): ";
-    set choice to input;
+Start caesar cipher;
 
-    If choice is not E and D
-        print "invalid input";
+Request cipher choice;
+Request plain/cipher text;
+Request shift;
 
-    print "input the text: ";
-    set text to input;
-
-    print "input the shift: ";
-    set shift to input;
-
-    If shift is not int
-        print "invalid input";
-
-    print "your encoded/decoded test is: ";
-
-    Foreach(character in text)
-    {
-        If character is alphabetical
-            If choice is 'e'
-                print character + shift;
-            Else
-                print character - shift;
-        Else
-            print character;
-    }
-
+while(cipher choice is invalid (E or D)) {
+  Display error;
+  Request cipher choice;
 }
+
+if(choice is D) {
+  Make shift negative to decode;
+}
+
+For each character in plain/cipher text;
+if(character is alphabetical) {
+  Display character + shift;
+}
+ 
+else {
+  Displayer character;
+}
+
+End;
 ```
 Flowchart:
 
-![Flowchart](Flowchart.jpg)
+![Flowchart](http://code2flow.com/uP4lVX.png)
 
 ## 3. Development
 Development choices:
 
 When developing this program, Python 3+ was chosen for multiple reasons: When compared to a language like Java, Python programs are generally expected to run slower than Java programs they also take much less time to develop. Python programs are typically 3-5 times shorter than equivalent Java programs. This difference can be attributed to Python's built-in high-level data types and its dynamic typing (source(s) and more information can be found at: https://www.python.org/doc/essays/comparisons/)
 
-I shan't state all the functions/methods/statements/loops etc. used as most of them are self-explanatory and this is not a python tutorial, but `ord` (https://docs.python.org/3/library/functions.html#ord) and `chr` (https://docs.python.org/3/library/functions.html#chr) to cipher/decipher the characters.
+I shan't state all the functions/methods/statements/loops etc. used as most of them are self-explanatory and this is not a python tutorial, but the functions `ord` (https://docs.python.org/3/library/functions.html#ord) and `chr` (https://docs.python.org/3/library/functions.html#chr) to cipher/decipher the characters, and the loops `for` and `while` were used to iterate and validate.
 
 The inbuilt module `sys` has been used to exit the program with a clean exit status (0) if the program executed without problems, if problems were encountered then the program will exit with a non 0 status - this has been implemented to indicate if the program has ran correctly in the terminal.
 
@@ -204,9 +199,12 @@ Do you want to encode or decode? (E, D)
 The terminal arguments are automatically checked and validated by the `argparse` module itself, so creating a test plan for it was not necessary
 
 Development stages:
-[INSERT DEVELOPMENT STAGES HERE]
 
-notes: used string for cipher_test - quadratic runtime, global variables, recursive function, while loop rather than modulus...
+When developing this program, many development choices were made:
+- cipher_text was changed to type list from list to prevent quadratic runtime
+- the main code was placed in a function to avoid the dangers of global variables
+- the cipher function used while loops to keep each letter within the alphabet so it was replaced with clever math using modulus to prevent slow running times
+- recursive functions were used for validation which can cause the program to fail so it was replaced with a while loop
 
 Final product:
 ```python
