@@ -201,10 +201,29 @@ The terminal arguments are automatically checked and validated by the `argparse`
 Development stages:
 
 When developing this program, many development choices were made:
-- cipher_text was changed to type list from list to prevent quadratic runtime
+- cipher_text was changed to type list from list to prevent quadratic runtime:
+```python
+cipher_text = ""
+...
+cipher_text += letter
+...
+```
 - the main code was placed in a function to avoid the dangers of global variables
-- the cipher function used while loops to keep each letter within the alphabet so it was replaced with clever math using modulus to prevent slow running times
-- recursive functions were used for validation which can cause the program to fail so it was replaced with a while loop
+- the cipher function used while loops to keep each letter within the alphabet so it was replaced with clever math using modulus to prevent slow running times:
+```python
+while letter > ord("Z"):
+    letter -= 26
+    
+while letter < ord("A"):
+    letter += 26
+```
+- recursive functions were used for validation which can cause the program to fail so it was replaced with a while loop:
+```python
+def get_choice(...):
+    ...
+    get_choice()
+    ...
+```
 
 Final product:
 ```python
@@ -358,3 +377,14 @@ def main() -> int :
 if __name__ == "__main__":
     sys.exit(main())
 ```
+
+Evaluation:
+
+At the start of this document, requirments were set and have been met:
+- Requirment 1 and 2 have been met through the use of argparse in the code.
+- Requirment 3 has been met through the checking of `if len(sys.argv) > 1` and the use of input prompts.
+- Requirment 4 has been met through the `cipher` function.
+- Requirment 5 has been met through the use of the program loop.
+- Requirment 6 has been met through the use of multiple letter checks (e.g. aphabetical test) and the use of modulus.
+
+All together these requirments have been met and the program runs without any errors, it is somewhat efficiant to the max as there's barely any, if not none, improvements to be made.
