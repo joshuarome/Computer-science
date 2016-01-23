@@ -1,10 +1,7 @@
 # Task 1: Caesar cipher
 
-Analyse the detailed requirements for each situation and, using suitable 
-algorithms, design a solution to be coded in a suitable high-level programming language. Show the 
-iterative development of the individual solutions with suitable testing throughout the process. Test 
-the final products and evaluate your solutions against the detailed requirements you identified in the 
-analysis.
+Analyse the requirements for this program and design, develop, test and evaluate a program to enter, 
+encrypt and decrypt messages.
 
 ## 1. Requirements
 The Caesar cipher system must
