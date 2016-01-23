@@ -4,23 +4,15 @@ Analyse the requirements for this program and design, develop, test and evaluate
 encrypt and decrypt messages.
 
 ## 1. Requirements
-The Caesar cipher system must
+The Caesar cipher system must:
 
-1. Allow the use of terminal arguments, for example:
-  ```bash
-caesar_cipher.py --choice "E" --text "COMPUTING IS FUN" --shift 5 => "HTRUZYNSL NX KZS"
-```
-> Note: `=>` indicates the resulting output
+2. Non alphabetical plain/cipher text must be handled correctly
+3. Non integer shift values must be handled correctly
+4. Shifts which go out of bounds must be handled correctly
+5. Upper and lowercase values must be handled correctly
+6. The users input (whether it be from the terminal arguments or not) must be processed (ciphered according to their choice, text and shift) and validated. Example run:
 
-2. Short hand arguments must also be allowed, for example:
-  ```batch
-caesar_cipher.py -c "E" -t "COMPUTING IS FUN" -s 1 => "HTRUZYNSL NX KZS"
-```
-
-3. If no terminal arguments have been passed, then the system must take and store the user’s choice, plain/cipher text and shift
-
-4. The users input (whether it be from the terminal arguments or not) must be processed (ciphered according to their choice, text and shift). Example run:
-   ```bash
+```bash
 Do you want to encode or decode? (E, D)
 > E
 
@@ -35,15 +27,6 @@ Your encoded/decoded text is: HTRUZYNSL NX KZS
 Do you want to start again? (Y, N)
 > N
 ```
-
-5. The processed input must then be outputted giving the option to restart
-
-6. Handle possible errors such as:
- - Non alphabetical plain/cipher text
- - Non integer shift values
- - Shifts which go out of bounds
- - Upper and lowercase values
- - And any other possible errors
  
 ## 2. Design
 The Caesar cipher has been built assuming that it will be run from a terminal or Pythons IDLE.
@@ -377,11 +360,4 @@ if __name__ == "__main__":
 
 Evaluation:
 
-At the start of this document, requirments were set and have been met:
-- Requirment 1 and 2 have been met through the use of argparse in the code.
-- Requirment 3 has been met through the checking of `if len(sys.argv) > 1` and the use of input prompts.
-- Requirment 4 has been met through the `cipher` function.
-- Requirment 5 has been met through the use of the program loop.
-- Requirment 6 has been met through the use of multiple letter checks (e.g. aphabetical test) and the use of modulus.
-
-All together these requirments have been met and the program runs without any errors, it is somewhat efficiant to the max as there's barely any, if not none, improvements to be made.
+[fix this]
