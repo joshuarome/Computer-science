@@ -6,11 +6,11 @@ encrypt and decrypt messages.
 ## 1. Requirements
 The Caesar cipher system must:
 
-2. Non alphabetical plain/cipher text must be handled correctly
-3. Non integer shift values must be handled correctly
-4. Shifts which go out of bounds must be handled correctly
-5. Upper and lowercase values must be handled correctly
-6. The users input (whether it be from the terminal arguments or not) must be processed (ciphered according to their choice, text and shift) and validated. Example run:
+1. Handle non alphabetical plain/cipher text
+2. Handle non integer shift values
+3. Handle shifts which go out of bounds
+4. Handle upper and lowercase values
+5. Take, validate and cipher the users input. Example run:
 
 ```bash
 Do you want to encode or decode? (E, D)
@@ -360,4 +360,8 @@ if __name__ == "__main__":
 
 Evaluation:
 
-[fix this]
+1. None alphabetical characters are handled on line 46 and 49; each letter is checked to see if they're alphabetical, if they're then thh program progresses onto the next logical step to cipher it. However, if the letter is not alphabetical, then the ciphering process is skipped and it is added to the result unchanged.
+2. Non integer shift values are handled at 128 to 134; the program attempts to convert the users input to an int, if it fails then it displays an error (as it must not be an integer value).
+3. Letters are kept in the alphabet at line 48; modulus has been used with 26 to keep each letter in the alphabet.
+4. Upper/lower case values are handled mainly at line 44; the offset variable keeps the letter into the ASCII values, since capitals and non capital values vary it has made use of a one line if else statement to check if it's upper or not.
+5. Input is took, validated and processed in the multiple functions cipher, get_choice and main; the cipher function ciphers certain text by a choice and shift, the get_choice function gets the users input and validates it only accepting certain values and finally the main function is where the main code takes place, it's where the functions are called and input is taken (detailed information of these functions can be found in the functions doc strings).
