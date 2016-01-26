@@ -319,3 +319,4 @@ Evaluation:
 2. Letters are kept in the alphabet at line 63; modulus has been used with 26 to keep each letter in the alphabet.
 3. Upper/lower case values are handled mainly at line 56; the offset variable keeps the letter into the ASCII values, since capitals and non capital values vary it has made use of a one line if else statement to check if it's upper or not.
 4. Keywords of any length are taken at line 106.
+5. Input has been taken with the use of the `get_choice` and `cipher` function calls in main.
