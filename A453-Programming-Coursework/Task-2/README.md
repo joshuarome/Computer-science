@@ -315,4 +315,7 @@ if __name__ == "__main__":
 
 Evaluation:
 
-[fix]
+1. None alphabetical characters are handled on line 50 and 64; each letter is checked to see if they're alphabetical, if they're then thh program progresses onto the next logical step to cipher it. However, if the letter is not alphabetical, then the ciphering process is skipped and it is added to the result unchanged.
+2. Letters are kept in the alphabet at line 63; modulus has been used with 26 to keep each letter in the alphabet.
+3. Upper/lower case values are handled mainly at line 56; the offset variable keeps the letter into the ASCII values, since capitals and non capital values vary it has made use of a one line if else statement to check if it's upper or not.
+4. Keywords of any length are taken at line 106.
