@@ -7,7 +7,6 @@ encrypt and decrypt messages.
 2. Handle keyword letter shifts which go out of bounds
 3. Handle upper and lowercase values
 4. Take keywords of any length
-5. Handle invalid file names
 
 > Note: although the task requires a keyword of any length to be accepted, this is impossible; depending on your system there's a limited about of memory which can be allocated, by using pythons `sys` module and its `maxsize` variable this can be seen. A simple test can be carried out to prove this theory:
 ```python
@@ -19,7 +18,7 @@ MemoryError
 ```
 Thus meaning the requirment has to be changed, rather than accepting a keyword of any length, it must accept any keyword length before the max memory limit.
 
-6. Take, validate and cipher the users input. Example run:
+5. Take, validate and cipher the users input. Example run:
 
 ```bash
 Do you want to encode or decode? (E, D)
@@ -37,6 +36,8 @@ What is your second keyword to be ciphered/deciphered by?
 Do you want to start again? (Y, N)
 > N
 ```bash
+
+5. Handle invalid file names
 
 ## 2. Design
 The  file cipher has been built assuming that it will be run from a terminal or Pythons IDLE.
@@ -291,3 +292,10 @@ if __name__ == "__main__":
 > Note: this program requires `kw_cipher.py` and `caesar_cipher.py" to bw in the same directory otherwise it wont work properly; this is due to the fact that instead of copying and pasting code (which is somewhat inefficiant) it has been reused. If you require the code to not rely on a module I have created a version here: https://bpaste.net/show/e23b52036bfe
 
 Evaluation:
+
+1. None alphabetical characters are handled on line 50 and 64; each letter is checked to see if they're alphabetical, if they're then thh program progresses onto the next logical step to cipher it. However, if the letter is not alphabetical, then the ciphering process is skipped and it is added to the result unchanged.
+2. Letters are kept in the alphabet at line 63; modulus has been used with 26 to keep each letter in the alphabet.
+3. Upper/lower case values are handled mainly at line 56; the offset variable keeps the letter into the ASCII values, since capitals and non capital values vary it has made use of a one line if else statement to check if it's upper or not.
+4. Keywords of any length are taken at line 106.
+5. Input has been taken with the use of the `get_choice` and `cipher` function calls in main.
+6. Invalid file names are handled at the try blocks 133 and 152.
