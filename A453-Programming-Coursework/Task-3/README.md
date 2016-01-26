@@ -35,7 +35,7 @@ What is your second keyword to be ciphered/deciphered by?
 
 Do you want to start again? (Y, N)
 > N
-```bash
+```
 
 5. Handle invalid file names
 
