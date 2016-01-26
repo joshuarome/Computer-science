@@ -314,7 +314,7 @@ def main() -> int :
         - shift: int which stores the shift to be ciphered by
 
     return:
-        int : 0
+        int
     """
     #if args passed from terminal
     if len(sys.argv) > 1:
