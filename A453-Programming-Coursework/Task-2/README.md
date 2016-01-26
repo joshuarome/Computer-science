@@ -1,4 +1,4 @@
-# Task 1: Keyword cipher
+# Task 2: Keyword cipher
 
 Analyse the requirements for this program and design, develop, test and evaluate a program to enter, 
 encrypt and decrypt messages.
