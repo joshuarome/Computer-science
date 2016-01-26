@@ -7,7 +7,6 @@ encrypt and decrypt messages.
 2. Handle keyword letter shifts which go out of bounds
 3. Handle upper and lowercase values
 4. Take keywords of any length
-5. Handle invalid file names
 
 > Note: although the task requires a keyword of any length to be accepted, this is impossible; depending on your system there's a limited about of memory which can be allocated, by using pythons `sys` module and its `maxsize` variable this can be seen. A simple test can be carried out to prove this theory:
 ```python
@@ -19,7 +18,7 @@ MemoryError
 ```
 Thus meaning the requirment has to be changed, rather than accepting a keyword of any length, it must accept any keyword length before the max memory limit.
 
-6. Take, validate and cipher the users input. Example run:
+5. Take, validate and cipher the users input. Example run:
 
 ```bash
 Do you want to encode or decode? (E, D)
@@ -37,6 +36,8 @@ What is your second keyword to be ciphered/deciphered by?
 Do you want to start again? (Y, N)
 > N
 ```
+
+6. Handle invalid file names
 
 ## 2. Design
 The  file cipher has been built assuming that it will be run from a terminal or Pythons IDLE.
