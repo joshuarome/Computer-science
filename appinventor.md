@@ -71,4 +71,68 @@ In terms of time, no more than an hour (of the 20 hours given) should be spent o
 ## Development
 ### Planning
 
-This task required that I obtain an image of a University campus and display it on screen. To do this, the search engine "Google" will be used.
+### Task 1
+The first part of the task required me to obtain a map of a university campus, after doing a quick search I managed to find and obtain this image:
+
+![](http://i.imgur.com/GHGvwoF.png)
+
+It was then required that I display the image, I decided to do this by placing a canvas on the screen and make its background image the campus. I used a canvas as it's very flexible allowing me to place buttons in it which is required for the next task:
+
+![](http://i.imgur.com/aH1dly2.png)
+### Task 2
+This task required that each building was touchable and upon being touched the amount of computers available in that building is to be displayed. I thought of many ways to achieve this, but the most reasonable and logic method was to use ImageSprites as buttons.
+
+The reasons for this is because the other option was to use balls, however, when making them invisible they're no longer touchable which was a large disappointment. However, I was able to achieve this by using ImageSrpties and making their image transparent.
+
+I decided to place these buttons in the canvas that was created in the previous task. A label was then placed (outside of the canvas, in screen1) on top of the canvas which is to display the amount of buildings available.
+
+![](http://i.imgur.com/6k3w9Wq.png)
+
+In order to make these buttons worked, I created two global lists: one storing the amount of computers available in each building (each item being one building, index one would store the amount of buildings available in building one and so on) and the other one storing Booleans on whether the building has been reserved by them or not (in preparation for the other tasks).
+
+A procedure was then made which takes the buttons/building number which then displays the amount of buildings available. The reason why a procedure was used was to save having to duplicate code multiple times making it longer, inefficient and hard to read.
+
+And finally, multiple checks to see if each button had been pressed were made and if they were the procedure was called with the building number.
+
+![](http://i.imgur.com/47Qwk2e.png)
+
+### Task 3
+For this task I was required to make two buttons, one button would cancel the reservation of the computer, and one button would reserve it. The aim was to make it so when a building is pressed, a cancel and reserve button is presented which then increases or decreases the amount of buildings avaliable (increase if they press cancel and decrease if they press reserve).
+
+The task also required me to do some validation so the reserve button can't be pressed if they have already reserved and the cancel button can't be pressed if they haven't already cancelled it.
+
+Note: since the task itself never stated how many computers each person can reserve I assumed that they could only reserve one per person.
+
+The development:
+To develop this I thought of a few various ways, the best way seemed to use App Inventor's own buttons: http://ai2.appinventor.mit.edu/reference/components/userinterface.html#Button
+
+On the source it clearly states that "Button with the ability to detect clicks. Many aspects of its appearance can be changed, as well as whether it is clickable (Enabled), can be changed in the Designer or in the Blocks Editor.". This is very useful as we can ont only use it to increase/decrease the amount of computers avaliable in each building, but we can also change whether they are clickable or not (as spoken about in the validation).
+
+I dragged both of these buttons onto the first screen, and used a horizonatal aligner; a horizantal aligner (as I found out through the use of expirimenting) allows you to put two elements on the same horizonatal alignment, this was very useful for the button placement as it meant users could press both of them easily.
+
+The first one was then renamed to "Reserve" (as that will be the button which reserves the building) and the second one was renamed to "cancel" (as that was the one which would cancel the building when reserved).
+
+Moving onto the next part, the Programming:
+I then made use of the events feature in App Inventor; the events system is a system which checks if certain buttons have been clicked or not. When the "Reserve" or "Cancel" buttons were clicked an event was made to check if they were clicked or not, if they were clicked then each would have their own code block to allow something to happen.
+
+I managed to learn this through the use of App Inventor's documentation: http://appinventor.mit.edu/explore/understanding-blocks.html teaches how blocks and events work which is what was researched.
+
+For the reserve button a check was made to see if the user had already reserved the current building or not (which is stored on the global variable "bpc_reserved"). This was done through the use of checking if the "current_building" (the variable which stores the building number that has been clicked on) of the "bpc_avaliable" list was equal to true. If it was equal to true then it meant that it had already been reserved, this will be spoke of in more detail when we get to it.
+
+Similar thing was also done to the cancel button, but rather than checking if the current building wasn't already reserved, it checked if it was reserved by using a "not" block which reverses the boolean condition.
+
+Nextly I then needed to check whether the building that is trying to be reserved has enough avaliable computers to be reserved. To do this I again used "current_building" and "bpc_avaliable" and checked if the item in the list (also the building) is greater than 1.
+
+This check was not done on the cancel button as it didn't matter whether the building had computers avaliable or not.
+
+After that I then made it so if every check suceeded, then it would make it so the current buildings avaliablity has been reserved. This was done by using "replace" in the list section. This was also done on the cancel block but the difference is, instead of setting reserved to true, it was set to false.
+
+The amount of computers avalibale then decreased i reserved or increase if cancelled using the math blocks; specifically the - and + symbol. And finally, the procedure to display text was called and displayed the amount of building.
+
+And here is all of task 3 in one picture:
+[insert full code block at end of it]
+
+[insert image for every individual code block here, also add image of each element and their naming]
+
+### Task 4
+Task 4 required me to create a feature which display the location of each building that's avaliable if the one pressed has none left
