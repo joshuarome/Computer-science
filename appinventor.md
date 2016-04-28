@@ -140,3 +140,12 @@ Task 4 required me to create a feature which display the location of each buildi
 To start this, everytime a building with no computers left was pressed not only did it make the button unclickable, but it also did a for loop through each one of the buildings in the bpc_avaliable list, and those computers that are avaliable are added to the .text of the text label saying "B" + the building number to produce the result shown in the previous paragraph. This also cancelled both the reserve and cancel button from being clickable so no errors can come of it. 
 
 [insert annotated picture here]
+
+### Task 5
+When looking at my Application, it seems like it has many purposes that would be useful for a university student: it allows students to book a computer without just a few clicks, this is a lot easier than having to make a phone call or any other form of booking. It also shows each building and its number on the map campus which makes it a lot easier to visualize with annotated buildings. It also allows you to see the amount of buildings avaliable and the amount that will be after you reserve or cancel
+
+### Task 6
+If I were to add another feature, it would be to make it so when a button is clicked, it glows so the user can remember which building number they're on. This will make things less confusing so you don't accidently click on the same building again.
+
+### Task 7
+To implement this I will need to
