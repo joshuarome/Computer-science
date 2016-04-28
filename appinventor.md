@@ -135,4 +135,8 @@ And here is all of task 3 in one picture:
 [insert image for every individual code block here, also add image of each element and their naming]
 
 ### Task 4
-Task 4 required me to create a feature which display the location of each building that's avaliable if the one pressed has none left
+Task 4 required me to create a feature which display the location of each building that's avaliable if the one pressed has none left. To do this I decieded to display it with a label, the label would print the buildings which had computers in. For example, "There are no moe computers avaliable to book in this building, try these: B1, B2, B3, B4..." and so on. This meant that I won't need to add any complex features or confuse the user. This also means less time and code needed.
+
+To start this, everytime a building with no computers left was pressed not only did it make the button unclickable, but it also did a for loop through each one of the buildings in the bpc_avaliable list, and those computers that are avaliable are added to the .text of the text label saying "B" + the building number to produce the result shown in the previous paragraph. This also cancelled both the reserve and cancel button from being clickable so no errors can come of it. 
+
+[insert annotated picture here]
