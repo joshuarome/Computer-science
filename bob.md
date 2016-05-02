@@ -115,3 +115,16 @@ Labels have been chosen as they allow text to be displayed and edited through th
 ![](http://code2flow.com/UA9BIn.png)
 
 ### Development
+To start the development of this task, I placed an ```ImageSprite``` on each building and renamed them "b" + the number of the building they have been applied to. A transparent image, made using photoshop, was uploaded and set as their image. The image was then resized to fit the size of the building it's applied to (to allow the user to easily touch the building itself, rather than struggle to touch a small button).
+
+A label called "bpc_text" (which stands for, building pc text - the text which will display the amount computers in the building) was then placed at the top, above the canvas. I allowed the size of it to be filled by the parent both length and height wise as that way the text can automatically fit on the screen.
+
+![](http://i.imgur.com/xpn2JHh.png)
+
+The next step required me to get into the techical programming side of things. Starting off, two global list were created, one called ```bpc_avaliable``` and the other called ```bpc_reserved```. ```bpc_avaliable```contained 14 items (the same amount of buildings on the campus image, each index will be the buildings number e.g. ```bpc_avaliable[1]``` would store the amount of buildings avaliable in the first building. Each building had a number of computers assigned to it (I decieded to make it go in chronological order starting from 0 to 13 for debugging purposes).
+
+![](http://i.imgur.com/gxH17Vb.png)
+
+Like previously, ```bpc_reserved``` is a global list which contains 14 items, however, instead of containing the number of comptuers avaliable in each building. It contains a ```Boolean``` (a value which can either store ```True```, or ```False```) used to check if the building already has a computer reserved or not (to prevent users from reserving more than one computer). These are all set to ```False``` as since the program has just started they obviously haven't reserved any yet.
+
+![](http://i.imgur.com/DXRYyZ3.png)
