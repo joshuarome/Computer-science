@@ -93,6 +93,13 @@ A canvas was then added to the screen (which was renamed to "campus" for readabi
 ![](http://i.imgur.com/XQSE7K6.png)
 ![](http://i.imgur.com/aH1dly2.png)
 
+### Testing
+To test and ensure the application worked as planned, the emulator was launched and connected to test:
+
+![](http://i.imgur.com/l0sAyd4.png)
+
+The outcome procued the result as planned so no further testing is required here. 
+
 ## Task 2
 
 ### Planning
@@ -129,4 +136,24 @@ Like previously, ```bpc_reserved``` is a global list which contains 14 items, ho
 
 ![](http://i.imgur.com/DXRYyZ3.png)
 
-The next step was to create the main backbone of the program: ```bpc_run```. This procedure is to be called when each button is pressed
+The next step was to create the main backbone of the program: ```bpc_run```. This procedure is to be called when each button is pressed.
+
+![](http://i.imgur.com/nNhSkfh.png)
+
+The procedure takes the argument "n" (the number of the current building being pressed) and then procedes to call various other functions and blocks. A procudure has been used to prevent the use of code duplication (http://appinventor.mit.edu/explore/ai2/support/concepts/procedures.html).
+
+The next step was to create another procedure which is designed to display the amount of computers avaliable for the selected building. 
+
+![](http://i.imgur.com/fC19LV8.png)
+
+Like before, the procedure takes the argument "n" for the exact same reason. Using the ```text``` property of the label created earlier, the text was then changed. The "join" function was used to concatenate "There are " with the current amount of computers avaliable (through the use of "select list item lsit" which allows me to lookup the amount avaliable using "n" which is the current building) and finally added to " computers available in this building." which creates a nice outcome e.g. "There are 10  computers available in this building".
+
+And finally, an event was checked for each button to see if they had been touched. If they were touched, the procedure "run" was called with the building number being passed:
+
+![](http://i.imgur.com/zfvWzzh.png)
+
+### Testing
+To test if the program is working correctly, a test table has been corrected to test the outcome of each button.
+
+| Button | Expected outcome | Actual outcome |
+| 1 |------------------| -------------- |
