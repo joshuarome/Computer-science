@@ -128,3 +128,5 @@ The next step required me to get into the techical programming side of things. S
 Like previously, ```bpc_reserved``` is a global list which contains 14 items, however, instead of containing the number of comptuers avaliable in each building. It contains a ```Boolean``` (a value which can either store ```True```, or ```False```) used to check if the building already has a computer reserved or not (to prevent users from reserving more than one computer). These are all set to ```False``` as since the program has just started they obviously haven't reserved any yet.
 
 ![](http://i.imgur.com/DXRYyZ3.png)
+
+The next step was to create the main backbone of the program: ```bpc_run```. This procedure is to be called when each button is pressed
