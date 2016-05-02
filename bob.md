@@ -156,4 +156,11 @@ And finally, an event was checked for each button to see if they had been touche
 To test if the program is working correctly, a test table has been corrected to test the outcome of each button.
 
 | Button | Expected outcome | Actual outcome |
-| 1 |------------------| -------------- |
+----------------------------------------------
+| 1     | Amount of computers displayed (0) | Amount of computers displayed (0)  |
+
+|Button|Expected outcome|Actual outcome|
+|---|---|---|
+| 1     | Amount of computers displayed (0) | Amount of computers displayed (0)  |
+| 1     | Amount of computers displayed (0) | Amount of computers displayed (0)  |
+| 1     | Amount of computers displayed (0) | Amount of computers displayed (0)  |
