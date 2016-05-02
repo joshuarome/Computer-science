@@ -164,3 +164,5 @@ To test if the program is working correctly, a test table has been corrected to 
 | 1     | Amount of computers displayed (0) | Amount of computers displayed (0)  |
 | 1     | Amount of computers displayed (0) | Amount of computers displayed (0)  |
 | 1     | Amount of computers displayed (0) | Amount of computers displayed (0)  |
+| 1     | Amount of computers displayed (0) | Amount of computers displayed (0)  |
+| 1     | Amount of computers displayed (0) | Amount of computers displayed (0)  |
