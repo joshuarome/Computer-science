@@ -155,19 +155,21 @@ And finally, an event was checked for each button to see if they had been touche
 ### Testing
 To test if the program is working correctly, a test table has been corrected to test the outcome of each button.
 
-|Button |Expected outcome                    |Actual outcome                       |
-|-------|------------------------------------|-------------------------------------|
-| 1     | Amount of computers displayed (0)  | Amount of computers displayed (0)   |
-| 2     | Amount of computers displayed (1)  | Amount of computers displayed (1)   |
-| 3     | Amount of computers displayed (2)  | Amount of computers displayed (2)   |
-| 4     | Amount of computers displayed (3)  | Amount of computers displayed (3)   |
-| 5     | Amount of computers displayed (4)  | Amount of computers displayed (4)   |
-| 6     | Amount of computers displayed (5)  | Amount of computers displayed (5)   |
-| 7     | Amount of computers displayed (6)  | Amount of computers displayed (6)   |
-| 8     | Amount of computers displayed (7)  | Amount of computers displayed (7)   |
-| 9     | Amount of computers displayed (8)  | Amount of computers displayed (8)   |
-| 10    | Amount of computers displayed (9)  | Amount of computers displayed (9)   |
-| 11    | Amount of computers displayed (10) | Amount of computers displayed (10)  |
-| 12    | Amount of computers displayed (11) | Amount of computers displayed (11)  |
-| 13    | Amount of computers displayed (12) | Amount of computers displayed (12)  |
-| 14    | Amount of computers displayed (13) | Amount of computers displayed (13)  |
+|Button |Expected outcome                    |Actual outcome                       |✔/✘|
+|-------|------------------------------------|-------------------------------------|----|
+| 1     | Amount of computers displayed (0)  | Amount of computers displayed (0)   |✔|
+| 2     | Amount of computers displayed (1)  | Amount of computers displayed (1)   |✔|
+| 3     | Amount of computers displayed (2)  | Amount of computers displayed (2)   |✔|
+| 4     | Amount of computers displayed (3)  | Amount of computers displayed (3)   |✔|
+| 5     | Amount of computers displayed (4)  | Amount of computers displayed (4)   |✔|
+| 6     | Amount of computers displayed (5)  | Amount of computers displayed (5)   |✔|
+| 7     | Amount of computers displayed (6)  | Amount of computers displayed (6)   |✔|
+| 8     | Amount of computers displayed (7)  | Amount of computers displayed (7)   |✔|
+| 9     | Amount of computers displayed (8)  | Amount of computers displayed (8)   |✔|
+| 10    | Amount of computers displayed (9)  | Amount of computers displayed (9)   |✔|
+| 11    | Amount of computers displayed (10) | Amount of computers displayed (10)  |✔|
+| 12    | Amount of computers displayed (11) | Amount of computers displayed (11)  |✔|
+| 13    | Amount of computers displayed (12) | Amount of computers displayed (12)  |✔|
+| 14    | Amount of computers displayed (13) | Amount of computers displayed (13)  |✔|
+
+Becuase one procedure was reused for each button, it not only makes the program far more efficiant and prevents code duplication, but also allows the debugging process to be a ton easier and prevents the cause of errors.
