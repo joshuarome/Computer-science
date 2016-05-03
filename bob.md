@@ -119,7 +119,7 @@ Labels have been chosen as they allow text to be displayed and edited through th
 
 **Source(s)**: http://ai2.appinventor.mit.edu/reference/components/userinterface.html#Label
 
-![](http://code2flow.com/UA9BIn.code.png)
+![](http://code2flow.com/IL9xNN.code.png)
 
 ### Development
 To start the development of this task, I placed an ```ImageSprite``` on each building and renamed them "b" + the number of the building they have been applied to. A transparent image, made using photoshop, was uploaded and set as their image. The image was then resized to fit the size of the building it's applied to (to allow the user to easily touch the building itself, rather than struggle to touch a small button).
@@ -199,3 +199,15 @@ I have also decieded to use ```HorizontalArrangement``` to align each button to 
 **Source(s)**: http://ai2.appinventor.mit.edu/reference/components/layout.html#HorizontalArrangement
 
 ![](http://code2flow.com/IOzVFy.code.png)
+
+### Develpment
+
+As said in the planning, two buttons, ‘reserve’ and ‘cancel’, were created and placed in a ```HorizontalArrangement```. The reserve button was renamed to "bpc_reserve" and the cancel button was renamed to "bpc_cancel":
+
+![](http://i.imgur.com/p9oSxTN.png)
+
+In terms of programming, a lot of thought and development went into it; firstly, a global variable was created called "current_building" which stores the building currently selected, this has been made for when the events for each button are set. The "current_building" is then set to "n" in the "bpc_run" function (as "n" is the building number passed to it).
+
+A check using the "if" statement is made checking if the building has already been reserved or not. This has been by using the current building number as an index to "bpc_reserved" and checking if that value is true or not, if it's not true then the building can be reserved and the reserve button is set to enabled and the cancel button is disabled through the use of the ```Enabled``` property. If however, it is already reserved, the reserve button is disabled and the cancel button is enabled:
+
+![](http://i.imgur.com/fHyLST9.png)
