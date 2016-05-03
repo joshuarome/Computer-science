@@ -79,7 +79,7 @@ The task required me to obtain and display a map of a university campus, after l
 
 The "BackgroundImage" property can be used to hold the image, and for the future tasks, sprites can be placed in it as buttons.
 
-![](http://code2flow.com/6y2pJv.png)
+![](http://code2flow.com/6y2pJv.code.png)
 
 **Source(s)**: http://ai2.appinventor.mit.edu/reference/components/animation.html#Canvas
 
@@ -119,7 +119,7 @@ Labels have been chosen as they allow text to be displayed and edited through th
 
 **Source(s)**: http://ai2.appinventor.mit.edu/reference/components/userinterface.html#Label
 
-![](http://code2flow.com/UA9BIn.png)
+![](http://code2flow.com/UA9BIn.code.png)
 
 ### Development
 To start the development of this task, I placed an ```ImageSprite``` on each building and renamed them "b" + the number of the building they have been applied to. A transparent image, made using photoshop, was uploaded and set as their image. The image was then resized to fit the size of the building it's applied to (to allow the user to easily touch the building itself, rather than struggle to touch a small button).
@@ -152,6 +152,10 @@ And finally, an event was checked for each button to see if they had been touche
 
 ![](http://i.imgur.com/zfvWzzh.png)
 
+Final result:
+
+![](http://i.imgur.com/pW2Pk5P.png)
+
 ### Testing
 To test if the program is working correctly, a test table has been corrected to test the outcome of each button.
 
@@ -173,3 +177,25 @@ To test if the program is working correctly, a test table has been corrected to 
 | 14    | Amount of computers displayed (13) | Amount of computers displayed (13)  |✔|
 
 Becuase one procedure was reused for each button, it not only makes the program far more efficiant and prevents code duplication, but also allows the debugging process to be a ton easier and prevents the cause of errors.
+
+## Task 3
+
+### Planning
+
+Task 3 required me to create two buttons, ‘reserve’ and ‘cancel’ and to ensure that when the ‘reserve’ button is clicked, the
+number of computers shown as available for that building is decremented. Similarly, the ‘cancel’
+button increments the number of computers available.
+
+For this task, there were multiple choices given to me, I however found that the use of the ```Button``` component was most suitable as it not only allowed it to be touched, but also allowed the disabling and enabling of it.
+
+![](http://i.imgur.com/QsQMFSu.png)
+
+**Source(s)**: http://ai2.appinventor.mit.edu/reference/components/userinterface.html#Button
+
+I have also decieded to use ```HorizontalArrangement``` to align each button to make it easier to press and easy to use as it automatically sets height and width adjustments.
+
+![](http://i.imgur.com/Wvb9wMH.png)
+
+**Source(s)**: http://ai2.appinventor.mit.edu/reference/components/layout.html#HorizontalArrangement
+
+![](http://code2flow.com/IOzVFy.code.png)
