@@ -208,6 +208,16 @@ As said in the planning, two buttons, ‘reserve’ and ‘cancel’, were creat
 
 In terms of programming, a lot of thought and development went into it; firstly, a global variable was created called "current_building" which stores the building currently selected, this has been made for when the events for each button are set. The "current_building" is then set to "n" in the "bpc_run" function (as "n" is the building number passed to it).
 
-A check using the "if" statement is made checking if the building has already been reserved or not. This has been by using the current building number as an index to "bpc_reserved" and checking if that value is true or not, if it's not true then the building can be reserved and the reserve button is set to enabled and the cancel button is disabled through the use of the ```Enabled``` property. If however, it is already reserved, the reserve button is disabled and the cancel button is enabled:
+A check using the "if" statement is made checking if the building has already been reserved or not. This has been by using the current building number as an index to "bpc_reserved" and checking if that value is true or not, if it's not true then the buildings computer can be reserved and the reserve button is set to enabled and the cancel button is disabled through the use of the ```Enabled``` property. If however, it is already reserved, the reserve button is disabled and the cancel button is enabled:
 
 ![](http://i.imgur.com/fHyLST9.png)
+
+The next part of the code is the "bpc_reserve" button event; through the use of the ```Click``` event, it was possible to check whether the button had be clicked or not. When clicked, a check would be made (like shown and explained before) to check if the buildings computer hasn't been reserved already and if there were any computers avaliable. If not, through the use of the ```replace``` function, the building index ("current_building" was used here") in "bpc_reserved" was set to ```true``` (so it couldn't be reserved again), again using the ```replace``` function, the amount of computers avaliable in that building was decreased by 1 using the "bpc_avaliable" list.
+
+And finally, "bpc_display" was called whilst disabling the reserve button and enabling the cancel button (using the ```Enabled``` property as discussed previously) in order to stop it from being reserved again.
+
+The "bpc_cancel" button was made very similarly, however, instead of checking if the building hadn't been reserved, it checked if it had been reserved (so it can be cancelled), instead of decreasing amount of computers avaliable when pressed, instead of setting reserved to true, it set it to false and finally it made reserve true and cancel false.
+
+### Testing
+
+[insert test table]
