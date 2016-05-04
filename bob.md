@@ -227,7 +227,7 @@ The "bpc_cancel" button was made very similarly, however, instead of checking if
 ### Planning
 This task required me to create a feature which displays each computer avaliable when a user touches a building that has none left. To do this I thought of many ways (such as multiple screens) but the most logical and simplest was to use the label "bpc_text" to notify the user of each building avaliable e.g. "None left, try these: B1 B2 B3..." and so on.
 
-To achieve this, I have acknowledged that "for" loops will need to be used to loop through each building to check which computers are avaliable. A for each loop will not be used as the index of the item will need to be reffered to;
+Since no new components will be added, not much research will be needed, however, to achieve this, I have acknowledged that "for" loops will need to be used to loop through each building to check which computers are avaliable. A for each loop will not be used as the index of the item will need to be reffered to:
 
 ![](https://i.imgsafe.org/1795283.png)
 
@@ -236,4 +236,8 @@ To achieve this, I have acknowledged that "for" loops will need to be used to lo
 ![](http://code2flow.com/Vldwmv.code.png)
 
 ### Development
+No new compenents needed to be added or configured so the programming was immediantly started. In the "bpc_run" proceudre, a check was made to see if there are no computers in that building avaliable for reservation. If none are avaliable, then both buttons are set to false (as it shouldn't be possible to reserve or cancel an empty building):
 
+![](http://i.imgur.com/aq9ypGj.png)
+
+The next step was to make "bpc_text" display the buildings avaliable, I first set the text to "None left, try these: " through the use of the ```text``` property to begin the structuring of the sentance. As discussed before, a "for" loop was used
