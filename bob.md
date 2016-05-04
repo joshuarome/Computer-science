@@ -1,4 +1,3 @@
-
 # A452 Practical Investigation Coursework
 
 ## Research
@@ -220,4 +219,21 @@ The "bpc_cancel" button was made very similarly, however, instead of checking if
 
 ### Testing
 
+[insert testing intro]
 [insert test table]
+
+## Task 4
+
+### Planning
+This task required me to create a feature which displays each computer avaliable when a user touches a building that has none left. To do this I thought of many ways (such as multiple screens) but the most logical and simplest was to use the label "bpc_text" to notify the user of each building avaliable e.g. "None left, try these: B1 B2 B3..." and so on.
+
+To achieve this, I have acknowledged that "for" loops will need to be used to loop through each building to check which computers are avaliable. A for each loop will not be used as the index of the item will need to be reffered to;
+
+![](https://i.imgsafe.org/1795283.png)
+
+**Source(s)**: http://appinventor.mit.edu/explore/ai2/support/blocks/control.html#forrange
+
+![](http://code2flow.com/Vldwmv.code.png)
+
+### Development
+
