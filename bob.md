@@ -145,7 +145,7 @@ The next step was to create another procedure which is designed to display the a
 
 ![](http://i.imgur.com/fC19LV8.png)
 
-Like before, the procedure takes the argument "n" for the exact same reason. Using the ```text``` property of the label created earlier, the text was then changed. The "join" function was used to concatenate "There are " with the current amount of computers avaliable (through the use of "select list item lsit" which allows me to lookup the amount avaliable using "n" which is the current building) and finally added to " computers available in this building." which creates a nice outcome e.g. "There are 10  computers available in this building".
+Like before, the procedure takes the argument "n" for the exact same reason. Using the ```text``` property of the label created earlier, the text was then changed. The "join" function was used to concatenate "There are " with the current amount of computers avaliable (through the use of "select list item list" which allows me to lookup the amount avaliable using "n" which is the current building) and finally added to " computers available in this building." which creates a nice outcome e.g. "There are 10  computers available in this building".
 
 And finally, an event was checked for each button to see if they had been touched. If they were touched, the procedure "run" was called with the building number being passed:
 
@@ -240,4 +240,16 @@ No new compenents needed to be added or configured so the programming was immedi
 
 ![](http://i.imgur.com/aq9ypGj.png)
 
-The next step was to make "bpc_text" display the buildings avaliable, I first set the text to "None left, try these: " through the use of the ```text``` property to begin the structuring of the sentance. As discussed before, a "for" loop was used
+The next step was to make "bpc_text" display the buildings avaliable, I first set the text to "None left, try these: " through the use of the ```text``` property to begin the structuring of the sentance. As discussed before, a "for" loop will be used to iterate through each building and check if there are computers avaliable. The "length of list" function is used here to work out how many items there are that should be iterated through.
+
+To check if a computer was avaliable in each building, "i" in the for loop was used as an building index for "bpc_avaliable" and that was then checked to see if it was over 0 (a computer avaliable). If it was, then "bpc_text" is concatenated with the building number (the method for wont need to be explained as I have used and explained this previously).
+
+![](http://i.imgur.com/Ji8Aed9.png)
+
+### Testing
+When testing the program there was only one building button to test, the first building. When testing the program there were a few bugs, it would produce odd results that were unexpected. This was due to accidently selecting an item to be used as a key for accessing the computer count in the building when in actual fact it was meant to be an index, this has now been fixed and when pressing building one (the only building with no computers avaliable).
+
+[insert screenshots]
+
+## Task 5
+Task 5 required 
