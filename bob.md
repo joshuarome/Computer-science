@@ -252,4 +252,26 @@ When testing the program there was only one building button to test, the first b
 [insert screenshots]
 
 ## Task 5
-Task 5 required 
+Over all, the success of my application has been great. it's not only programmed and designed efficiently but is also extremely useful to a university member:
+
+Task Evaluations:
+
+- Task 1:  Task 1 was very simple and took very little time, it took no more than 10 minutes to complete and no errors were made thus making the development of it very successful. 
+- Task 2: Task 2 was somewhat more complex as it required programming and a few errors were ran into; when creating the task, I original planned to use the ```button``` component, however, when taking of its visbility property it could no longer be pressed which was an issue. So as an alternate, I had to use ImageSprites with a transparent background which took longer as photoshop (an  example of photo editing software) had to be opened. Other than that, the development of it was quite quick and successful and that task is where the main backbone of the program was developed.
+- Task 3: Task 3 has arguably been the most time spending task out of them all, however, because i've created software like this in the past, I had an idea in mind which allowed me to quickly and efficiantly program it on App Inventor. In terms of errors, there were none, but I do believe time could of spent more wisely on that task to make it possibly more of a success.
+- Task 4: Task 4 was an interesting task as it allows many various ways to achieve it which mostly take a long time, I however thought the idea to use the text label to display the names of each computer avaliable which technically achieves the task whilst using no new components (meaning less code and time) and only a few blocks of code. I would say this had to be one of the most successful task done.
+
+The usefulness of this program is quite extreme, students will not have to make phone calls or meet in person to book which generally is more time consuming. The fact that they're able to instantly access a copy of their unversity buildings and are avaliable to book and cancel computers with just a few clicks of a button wherever they are and whenever they want. This allos students to save time and focus on more valuable things such as studying.
+
+## Task 6:
+This task required that I describe a simple additional feature to be added. For this task, I decieded to add sounds to the cancel and reserve buttons simply to increase how easy it is to use; although not a big difference but having click sounds will ensure to the user that they've pressed the button.
+
+## Task 8:
+If this app was to be properly implemented then an online database would be required; there are many issues that need to be thought about:
+
+- The database would require a high speed server to run on so users can quickly access the data without any lag, however, a high speed will be somewhat costly and maintenance would also be required.
+- It is also important that the client side of the application does not cancel or book reservations until it has gone to the server and has been confirmed, if there's a slow internet connection then this will prevent reservations being shown as booked even though it hasn't reached to the server yet meaning the user will think they have booked when they in actual fact haven't.
+-  Data validation will also need to be existant. For example, two users cannot book a room at the same time, this can cause bad results which possibly break the database entiry. A way to prevent this is by having a system which records the timing of each reservation and allowing the fastest one.
+-  Security will need to be applied to the database too, it's important that only university members can reserve and cancel computer reservations, to do this the most logical, common and efficiant way would to make an account system (user + password). Another aspect of security is ensuring that the database is hack proof as if hackers were to hack the database then a lot of sensitive information would be leaked. This could possibly be done through a form of encyrption.
+
+**Source(s)**: https://en.wikipedia.org/wiki/Database
