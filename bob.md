@@ -252,6 +252,18 @@ When testing the program there was only one building button to test, the first b
 [insert screenshots]
 
 ## Task 5
+
+To evaluate success of my app, each task will be set to multiple specification points:
+
+1. It must be time efficiant; all time used sparingly
+2. It must be developed with a reasonable amount of efficiancy
+3. The output must be tested
+4. The output must eventually work as planned
+
+- Task 1: Task 1
+
+///////////////////////////////////////////////
+
 Over all, the success of my application has been great. it's not only programmed and designed efficiently but is also extremely useful to a university member:
 
 Task Evaluations:
