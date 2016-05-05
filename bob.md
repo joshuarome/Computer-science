@@ -264,7 +264,25 @@ Task Evaluations:
 The usefulness of this program is quite extreme, students will not have to make phone calls or meet in person to book which generally is more time consuming. The fact that they're able to instantly access a copy of their unversity buildings and are avaliable to book and cancel computers with just a few clicks of a button wherever they are and whenever they want. This allos students to save time and focus on more valuable things such as studying.
 
 ## Task 6:
-This task required that I describe a simple additional feature to be added. For this task, I decieded to add sounds to the cancel and reserve buttons simply to increase how easy it is to use; although not a big difference but having click sounds will ensure to the user that they've pressed the button.
+This task requires that a possible additional feature is though of and explain; there were many different ideas that came to mind but the most obvious one was to add sounds to both the cancel and reserve button. Although this is quite a simple feature, I feel like it's very effective and increases the quality and userablity of the application by quite a reasonable amount; it notifies the user with a sound to ensure them that they have pressed it and the computer has infact been reserved/cancelled.
+
+So all though this feature isn't complex at all, it makes a somewhat big difference that users would highly appriciate; not to mention that it's simple to implement and doesn't further complicate the userability.
+
+## Task 7:
+
+### Planning
+For this task, I have to implement the feature described in the previous task (ensure that when either the cancel or reservebutton is pressed, a click sound is played). In order to achieve this, a new component of App Inventor will need to be researched and used; the new feature will be the ```Sound``` component.
+
+![](https://i.imgsafe.org/c649fb1.png)
+
+**Source(s)**: https://i.imgsafe.org/c649fb1.png
+
+In order to add a click sound to the button(s), a click sound will need to be obtained. I have researched and found a free click sound that can be used: http://soundbible.com/772-Button.html
+
+![](http://code2flow.com/TfF00y.code.png)
+
+### Development
+To start off, a non-visible ```Sound``` component was added to my application, it was named renamed to "click_sound" (for readability purposes)
 
 ## Task 8:
 If this app was to be properly implemented then an online database would be required; there are many issues that need to be thought about:
