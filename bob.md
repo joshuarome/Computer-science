@@ -282,7 +282,23 @@ In order to add a click sound to the button(s), a click sound will need to be ob
 ![](http://code2flow.com/TfF00y.code.png)
 
 ### Development
-To start off, a non-visible ```Sound``` component was added to my application, it was named renamed to "click_sound" (for readability purposes)
+To start off, a non-visible ```Sound``` component was added to my application, it was named renamed to "click_sound" (for readability purposes). Its source was then changed to the click sound found earlier:
+
+![](https://i.imgsafe.org/c8d8a96.png)
+
+The next step was to add the code; since events for each button were already added previously, instead of making more events, I have decieded to add the play sound blocks (function which starts the sound) to the start of both the "bpc_reserve.click" event and the "bpc_cancel.click" event for effeciancy purposes (avoiding code duplication):
+
+![](https://i.imgsafe.org/f090916.png)
+
+### Testing
+Both buttons need to be tested to ensure each sound is being played correctly.
+
+|Button       |Expected outcome            |Actual outcome             |✔/✘|
+|-------------|----------------------------|---------------------------|----|
+| bpc_reserve | The click sound is played  | The click sound is played |✔|
+| bpc_cancel  | The click sound is played  | The click sound is played |✔|
+
+Since both buttons did exactly as expected, no further development is needed here.
 
 ## Task 8:
 If this app was to be properly implemented then an online database would be required; there are many issues that need to be thought about:
