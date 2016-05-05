@@ -6,6 +6,12 @@ encrypt and decrypt messages.
 ## 1. Requirements
 The Caesar cipher system must:
 
+1. Take input
+2. Encrypt and decrypt it
+3. Display the encrypted/decrypted input
+
+Validatation:
+
 1. Handle non alphabetical plain/cipher text
 2. Handle non integer shift values
 3. Handle shifts which go out of bounds
@@ -360,6 +366,12 @@ if __name__ == "__main__":
 
 Evaluation:
 
+1.
+2.
+3.
+
+Validation:
+ 
 1. None alphabetical characters are handled on line 46 and 49; each letter is checked to see if they're alphabetical, if they're then thh program progresses onto the next logical step to cipher it. However, if the letter is not alphabetical, then the ciphering process is skipped and it is added to the result unchanged.
 2. Non integer shift values are handled at 128 to 134; the program attempts to convert the users input to an int, if it fails then it displays an error (as it must not be an integer value).
 3. Letters are kept in the alphabet at line 48; modulus has been used with 26 to keep each letter in the alphabet.
