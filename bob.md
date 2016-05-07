@@ -175,6 +175,8 @@ To test if the program is working correctly, a test table has been corrected to 
 | 13    | Amount of computers displayed (12) | Amount of computers displayed (12)  |✔|
 | 14    | Amount of computers displayed (13) | Amount of computers displayed (13)  |✔|
 
+![](http://i.imgur.com/vh6g54d.png)
+
 Becuase one procedure was reused for each button, it not only makes the program far more efficiant and prevents code duplication, but also allows the debugging process to be a ton easier and prevents the cause of errors.
 
 ## Task 3
@@ -211,7 +213,11 @@ A check using the "if" statement is made checking if the building has already be
 
 ![](http://i.imgur.com/fHyLST9.png)
 
-The next part of the code is the "bpc_reserve" button event; through the use of the ```Click``` event, it was possible to check whether the button had be clicked or not. When clicked, a check would be made (like shown and explained before) to check if the buildings computer hasn't been reserved already and if there were any computers avaliable. If not, through the use of the ```replace``` function, the building index ("current_building" was used here") in "bpc_reserved" was set to ```true``` (so it couldn't be reserved again), again using the ```replace``` function, the amount of computers avaliable in that building was decreased by 1 using the "bpc_avaliable" list.
+The next part of the code is the "bpc_reserve" button event; through the use of the ```Click``` event, it was possible to check whether the button had be clicked or not.
+
+![](http://i.imgur.com/4IJSY5b.png)
+
+When clicked, a check would be made (like shown and explained before) to check if the buildings computer hasn't been reserved already and if there were any computers avaliable. If not, through the use of the ```replace``` function, the building index ("current_building" was used here") in "bpc_reserved" was set to ```true``` (so it couldn't be reserved again), again using the ```replace``` function, the amount of computers avaliable in that building was decreased by 1 using the "bpc_avaliable" list.
 
 And finally, "bpc_display" was called whilst disabling the reserve button and enabling the cancel button (using the ```Enabled``` property as discussed previously) in order to stop it from being reserved again.
 
