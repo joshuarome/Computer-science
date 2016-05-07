@@ -213,20 +213,79 @@ A check using the "if" statement is made checking if the building has already be
 
 ![](http://i.imgur.com/fHyLST9.png)
 
-The next part of the code is the "bpc_reserve" button event; through the use of the ```Click``` event, it was possible to check whether the button had be clicked or not.
+The next part of the code is the "bpc_reserve" button event; through the use of the ```Click``` event, it was possible to check whether the button had be clicked or not:
 
 ![](http://i.imgur.com/4IJSY5b.png)
 
-When clicked, a check would be made (like shown and explained before) to check if the buildings computer hasn't been reserved already and if there were any computers avaliable. If not, through the use of the ```replace``` function, the building index ("current_building" was used here") in "bpc_reserved" was set to ```true``` (so it couldn't be reserved again), again using the ```replace``` function, the amount of computers avaliable in that building was decreased by 1 using the "bpc_avaliable" list.
+When clicked, a check would be made (like shown and explained before) to check if the buildings computer hasn't been reserved already and if there were any computers avaliable. If not, through the use of the ```replace``` function, the building index ("current_building" was used here") in "bpc_reserved" was set to ```true``` (so it couldn't be reserved again), again using the ```replace``` function, the amount of computers avaliable in that building was decreased by 1 using the "bpc_avaliable" list:
+
+![](http://i.imgur.com/GyKdWYh.png)
 
 And finally, "bpc_display" was called whilst disabling the reserve button and enabling the cancel button (using the ```Enabled``` property as discussed previously) in order to stop it from being reserved again.
 
-The "bpc_cancel" button was made very similarly, however, instead of checking if the building hadn't been reserved, it checked if it had been reserved (so it can be cancelled), instead of decreasing amount of computers avaliable when pressed, instead of setting reserved to true, it set it to false and finally it made reserve true and cancel false.
+![](http://i.imgur.com/Robkbog.png)
+
+The "bpc_cancel" button was made very similarly. however, instead of checking if the building hadn't been reserved, it checked if it had been reserved (so it can be cancelled):
+
+![](http://i.imgur.com/ya2enOk.png)
+
+Instead of decreasing amount of computers avaliable when pressed, it increased the amount (as if they cancel it then there will be another building avaliable):
+
+![](http://i.imgur.com/Os3x3lK.png)
+
+Instead of setting reserved to true, it set it to false (as they would have cancelled the reservation):
+
+![](http://i.imgur.com/F1cEFkY.png)
+
+And finally it made the reserve button true and cancel button false:
+
+![](http://i.imgur.com/pgX5Ef3.png)
+
+Final result:
+
+![](http://i.imgur.com/pFtA9Jd.png)
 
 ### Testing
 
-[insert testing intro]
-[insert test table]
+For reserve button:
+
+|Building |Expected outcome                    |Actual outcome                       |✔/✘|
+|-------|------------------------------------|-------------------------------------|----|
+| 1     | No computers left so nothing happens  |No computers left so nothing happens  |✔|
+| 2     | Amount of computers decreases (0)  | Amount of computers decreases (0)   |✔|
+| 3     | Amount of computers decreases (1)  | Amount of computers decreases (1)   |✔|
+| 4     | Amount of computers decreases (2)  | Amount of computers decreases (2)   |✔|
+| 5     | Amount of computers decreases (3)  | Amount of computers decreases (3)   |✔|
+| 6     | Amount of computers decreases (4)  | Amount of computers decreases (4)   |✔|
+| 7     | Amount of computers decreases (5)  | Amount of computers decreases (5)   |✔|
+| 8     | Amount of computers decreases (6)  | Amount of computers decreases (6)   |✔|
+| 9     | Amount of computers decreases (7)  | Amount of computers decreases (7)   |✔|
+| 10    | Amount of computers decreases (8)  | Amount of computers decreases (8)   |✔|
+| 11    | Amount of computers decreases (9)  | Amount of computers decreases (9)   |✔|
+| 12    | Amount of computers decreases (10)  | Amount of computers decreases (10)   |✔|
+| 13    | Amount of computers decreases (11)  | Amount of computers decreases (11)   |✔|
+| 14    | Amount of computers decreases (12)  | Amount of computers decreases (12)   |✔|
+
+### Testing
+
+For cancel button:
+
+|Building |Expected outcome                    |Actual outcome                       |✔/✘|
+|-------|------------------------------------|-------------------------------------|----|
+| 1     | Amount of computers decreases (1)  |Amount of computers decreases (1)  |✔|
+| 2     | Amount of computers decreases (2)  | Amount of computers decreases (2)   |✔|
+| 3     | Amount of computers decreases (3)  | Amount of computers decreases (3)   |✔|
+| 4     | Amount of computers decreases (4)  | Amount of computers decreases (4)   |✔|
+| 5     | Amount of computers decreases (5)  | Amount of computers decreases (5)   |✔|
+| 6     | Amount of computers decreases (6)  | Amount of computers decreases (6)   |✔|
+| 7     | Amount of computers decreases (7)  | Amount of computers decreases (7)   |✔|
+| 8     | Amount of computers decreases (8)  | Amount of computers decreases (8)   |✔|
+| 9     | Amount of computers decreases (9)  | Amount of computers decreases (9)   |✔|
+| 10    | Amount of computers decreases (10)  | Amount of computers decreases (10)   |✔|
+| 11    | Amount of computers decreases (11)  | Amount of computers decreases (11)   |✔|
+| 12    | Amount of computers decreases (12)  | Amount of computers decreases (12)   |✔|
+| 13    | Amount of computers decreases (13)  | Amount of computers decreases (13)   |✔|
+| 14    | Amount of computers decreases (14)  | Amount of computers decreases (14)   |✔|
 
 ## Task 4
 
